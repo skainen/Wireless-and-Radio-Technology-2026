@@ -1,3 +1,1 @@
-Exercises 3.1, 3.2, 3.3.
-
-Analyzing LTE signals, local Wi-Fi networks and Bluetooth networks.
+Repository for Wireless and Radio Technology course turn-ins in Savonia UAS, 2026.
