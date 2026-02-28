@@ -23,9 +23,12 @@ v  = input('The field pattern: P(THETA,PHI)= ', 's');
 
 y     = abs(y1);
 ratio = max(max(y));
-y     = y / ratio;          % normalize to unit radius
+y     = y / ratio;
 
-[X, Y, Z] = sph2cart(PHI, pi/2 - THETA, y);
+% Direct spherical to Cartesian conversion
+X = y .* sin(THETA) .* cos(PHI);
+Y = y .* sin(THETA) .* sin(PHI);
+Z = y .* cos(THETA);
 
 figure;
 mesh(X, Y, Z);
