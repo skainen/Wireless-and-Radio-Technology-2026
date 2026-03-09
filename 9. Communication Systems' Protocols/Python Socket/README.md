@@ -1,1 +1,1 @@
-asd
+Simple TCP client-server system
