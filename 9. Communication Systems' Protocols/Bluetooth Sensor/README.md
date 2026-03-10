@@ -11,3 +11,5 @@ How it works:
   - It generates a random value every 5 seconds
   - It sends the value to the server using Bluetooth
   - The server receives and prints the data
+
+The main difference in practice to the socket connection is that Bluetooth uses Bluetooth MAC Address for binding instead of IP.
