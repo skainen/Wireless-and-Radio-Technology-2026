@@ -4,4 +4,6 @@
 
 <img width="1262" height="652" alt="grafana_dashboard" src="https://github.com/user-attachments/assets/60f4b7c3-d0a7-4284-832d-c631ddc8d900" />
 
+
+
 This MQTT dashboard setup is for live monitoring. The Grafana MQTT data source does not store event history on its own. To use older data, you must add a storage backend such as Loki or another time-series / log system.
