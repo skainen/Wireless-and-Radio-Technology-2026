@@ -3,7 +3,7 @@ import random
 import time
 
 SERVER_IP = "192.168.122.1"
-PORT = 1883
+PORT = 8000
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
