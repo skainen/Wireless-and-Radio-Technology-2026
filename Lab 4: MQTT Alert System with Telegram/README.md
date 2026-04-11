@@ -8,7 +8,7 @@
 
 ### Why is MQTT useful for building monitoring and alert systems in IoT?
 
-**Publish/subscribe decoupling:** the sensor doesn't need to know anything about who's listening. We can add a Telegram alerter, a database logger, and a dashboard subscriber all on the same topic without touching the sensor code.
+**Publish/subscribe decoupling:** the sensor does not need to know anything about who is listening. We can add a Telegram alerter, a database logger, and a dashboard subscriber all on the same topic without touching the sensor code.
 
 **Lightweight protocol:** designed for constrained devices and unreliable networks. MQTT has low overhead compared to HTTP polling, which matters when we have multiple sensors sending data simultaneously.
 
