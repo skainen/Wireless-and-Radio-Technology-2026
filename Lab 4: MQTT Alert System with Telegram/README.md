@@ -14,4 +14,4 @@
 
 **Broker handles distribution:** the broker fans out messages to all subscribers automatically. If we later want to alert on multiple channels like Telegram, email and SMS, we can just add more subscribers.
 
-We can also easily guarantee data delivery by defining **Quality of Service** level (QoS 0, 1 or 2) in code.  Higher reliability (higher QoS levels) uses more network overhead and adds latency, but might be necessary for critical data. A sensor publishing every second at QoS 2 is doing 4x work compared to QoS 0. For our sensor data, QoS 1 would be ideal as it guarantees all data gets through. It can occasionally duplicate the data, but that is not a big problem in an alert system.
+We can also easily guarantee data delivery by defining **Quality of Service** level (QoS 0, 1 or 2).  Higher reliability (higher QoS levels) uses more network overhead and adds latency, but might be necessary for critical data. A sensor publishing every second at QoS 2 is doing 4x work compared to QoS 0. For our sensor data, QoS 1 would be ideal as it guarantees all data gets through. It can occasionally duplicate the data, but that is not a big problem in an alert system.
