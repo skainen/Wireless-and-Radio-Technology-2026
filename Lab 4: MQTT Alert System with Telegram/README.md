@@ -5,3 +5,13 @@ socket_sensor.py simulates a sensor by generating temperature readings and sendi
 ### Telegram alerts
 
 <img width="382" height="185" alt="image" src="https://github.com/user-attachments/assets/f960a3ef-91ee-44b3-9f7d-6093fd21ba08" />
+
+### Why is MQTT useful for building monitoring and alert systems in IoT?
+
+Publish/subscribe decoupling: the sensor doesn't need to know anything about who's listening. We can add a Telegram alerter, a database logger, and a dashboard subscriber all on the same topic without touching the sensor code.
+
+Lightweight protocol: designed for constrained devices and unreliable networks. MQTT has low overhead compared to HTTP polling, which matters when we have multiple sensors sending data simultaneously.
+
+Broker handles distribution: the broker fans out messages to all subscribers automatically. If we later want to alert on multiple channels like Telegram, email and SMS, we can just add more subscribers.
+
+With MQTT we can also easily guarantee data delivery by defining quality of service level (QoS 1, 2 or 3) in code.  Higher reliability (higher QoS levels) uses more network overhead and adds latency, but might be necessary for critical data. A sensor publishing every second at QoS 2 is doing 4x the radio work compared to QoS 0.
